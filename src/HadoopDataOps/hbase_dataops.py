@@ -14,7 +14,7 @@ class HBaseRestClient:
         timeout: tuple = (5, 60),  # (connect_timeout, read_timeout)
         default_cf: str = "d",
         cf_mode: str = "single",   # "single" => d:field | "per_field" => field:value (seu padrão antigo)
-        hbase_host: str = "hbase-api",
+        hbase_host: str = "hbase-thrift",
         thrift_port: int = 9090
     ):
         self.base_url = base_url.rstrip("/")
@@ -25,7 +25,8 @@ class HBaseRestClient:
         self.hbase_host = hbase_host
         self.thrift_port = thrift_port
 
-        self.hbase_conn = happybase.Connection(
+    def hbase_connect(self):
+        return happybase.Connection(
             host=self.hbase_host,
             port=self.thrift_port,
             autoconnect=True
@@ -146,24 +147,23 @@ class HBaseRestClient:
     
     def get_hbase_rows_thrift(self, table_name):
         
-
-        table = self.hbase_conn.table(table_name)
+        hbase_conn = self.hbase_connect()
+        table = hbase_conn.table(table_name)
         rows = []
 
         for key, data in table.scan():
-            
             record = {
                 "row_key": key.decode()
             }
-
             # Convert column family qualifiers
             for col, value in data.items():
                 record[col.decode().replace(":", "_")] = value.decode(errors="ignore")
-
             rows.append(record)
-        
+        hbase_conn.close()
         return rows
     
     def put_hbase_row_thrift(self, table_name, row_key, data):
-        table = self.hbase_conn.table(table_name)
+        hbase_conn = self.hbase_connect()
+        table = hbase_conn.table(table_name)
         table.put(row_key.encode(), {f"{self.default_cf}:{k}".encode(): str(v).encode() for k, v in data.items()})
+        hbase_conn.close()
