@@ -129,3 +129,4 @@ class SQLDataOps:
         else:
             conn.execute(text(f"DROP TABLE {quoted_stg}"))
             raise NotImplementedError(f"Dialect '{dialect}' not supported for merge upsert.")
+        
