@@ -3,9 +3,10 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "HadoopDataOps"
+name = "DataOpsClasses"
 version = "0.1.0"
 description = "Biblioteca para manipulação de dados com o HBase"
+licence = "LICENCE"
 readme = "README.md"
 authors = [
     {name = "Leonardo Jeronimo", email = "leonardo.silva@activebi.com.br"}
