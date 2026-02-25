@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataops-classes"
-version = "0.1.0"
+version = "0.1.1"
 description = "Biblioteca para manipulação de dados com o HBase"
 license = "MIT"
 readme = "README.md"
@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-package-dir = { "" = "src" }
+#package-dir = { "" = "src" }
 packages = { find = {} }
 include-package-data = true
 zip-safe = false

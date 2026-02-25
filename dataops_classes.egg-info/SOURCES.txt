@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+DataOpsClasses/__init__.py
+DataOpsClasses/dataops_utils.py
+DataOpsClasses/hbase_dataops.py
+DataOpsClasses/sql_dataops.py
+dataops_classes.egg-info/PKG-INFO
+dataops_classes.egg-info/SOURCES.txt
+dataops_classes.egg-info/dependency_links.txt
+dataops_classes.egg-info/not-zip-safe
+dataops_classes.egg-info/requires.txt
+dataops_classes.egg-info/top_level.txt

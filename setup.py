@@ -9,7 +9,7 @@ readme = (here / "README.md").read_text(encoding="utf-8") if (here / "README.md"
 
 setup(
     name="activebi-bigdata-hadoop-dataops",
-    version="0.0.1",
+    version="0.1.1",
     description="ActiveBI Hadoop DataOps utilities",
     long_description=readme,
     long_description_content_type="text/markdown",
