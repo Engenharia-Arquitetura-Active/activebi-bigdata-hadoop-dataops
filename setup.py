@@ -20,6 +20,9 @@ setup(
     install_requires=[
         # normal PyPI dependency
         "requests>=2.25.1",
+        "pandas>=2.0",
+        "happybase>=1.3.0",
+        "SQLAlchemy"
         # dependency installed directly from a GitHub repository (PEP 508 direct URL)
         # Format: <name> @ git+https://github.com/<owner>/<repo>.git@<ref>
         # Examples:
