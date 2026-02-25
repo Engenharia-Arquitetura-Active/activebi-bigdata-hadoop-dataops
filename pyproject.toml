@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "DataOpsClasses"
 version = "0.1.0"
 description = "Biblioteca para manipulação de dados com o HBase"
-licence = "LICENCE"
+license = "LICENCE"
 readme = "README.md"
 authors = [
     {name = "Leonardo Jeronimo", email = "leonardo.silva@activebi.com.br"}
@@ -21,3 +21,6 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
