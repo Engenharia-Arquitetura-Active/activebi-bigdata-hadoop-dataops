@@ -13,8 +13,8 @@ setup(
     description="ActiveBI Hadoop DataOps utilities",
     long_description=readme,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourorg/activebi-bigdata-hadoop-dataops",
-    author="Your Name",
+    url="https://github.com/Engenharia-Arquitetura-Active/activebi-bigdata-hadoop-dataops",
+    author="Leonardo Jeronimo",
     packages=find_packages(exclude=("tests",)),
     python_requires=">=3.8",
     install_requires=[
@@ -25,7 +25,7 @@ setup(
         # Examples:
         # "mypkg @ git+https://github.com/owner/mypkg.git@v1.2.3"
         # "otherpkg @ git+https://github.com/owner/otherpkg.git@main"
-        "examplepkg @ git+https://github.com/owner/examplepkg.git@main",
+        # "examplepkg @ git+https://github.com/owner/examplepkg.git@main",
     ],
     include_package_data=True,
     license="MIT",
