@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataops-classes"
-version = "0.1.1"
+version = "0.1.2"
 description = "Biblioteca para manipulação de dados com o HBase"
 license = "MIT"
 readme = "README.md"
