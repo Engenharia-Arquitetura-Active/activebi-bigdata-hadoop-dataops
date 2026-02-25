@@ -1,12 +1,12 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=68", "wheel", "build"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "DataOpsClasses"
+name = "dataops-classes"
 version = "0.1.0"
 description = "Biblioteca para manipulação de dados com o HBase"
-license = "LICENCE"
+license = "MIT"
 readme = "README.md"
 authors = [
     {name = "Leonardo Jeronimo", email = "leonardo.silva@activebi.com.br"}
@@ -22,5 +22,5 @@ dependencies = [
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.setuptools.package-dir]
-"" = "src"
+[tool.setuptools]
+package-dir = { "" = "src" }

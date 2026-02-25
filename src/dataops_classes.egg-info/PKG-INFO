@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: dataops-classes
+Version: 0.1.0
+Summary: Biblioteca para manipulação de dados com o HBase
+Author-email: Leonardo Jeronimo <leonardo.silva@activebi.com.br>
+License-Expression: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.0
+Requires-Dist: happybase>=1.3.0
+Requires-Dist: SQLAlchemy
+Dynamic: license-file
