@@ -2,7 +2,7 @@ import happybase
 import requests
 import json
 
-from HadoopDataOps.dataops_utils import Utils
+from DataOpsClasses.dataops_utils import Utils
 from typing import Iterable, List, Dict, Any
 
 
